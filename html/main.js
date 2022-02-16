@@ -38,21 +38,21 @@ window.addEventListener('message', ({ data }) => {
 		var sound = new Audio('sounds/' + data.audio['file']);
 		sound.volume = volume;
 		sound.play();
-    }// else if (data.type == "display") {
-    //     if (data.text !== undefined) {
-    //         doorlock.style.display = 'block';
-    //         doorlock.innerHTML = data.text;
-    //         doorlock.classList.add('slide-in');
-    //     }
-    // } else if (data.type == "hide") {
-    //     doorlock.classList.add('slide-out');
-    //     setTimeout(function() {
-    //         doorlock.innerHTML = '';
-    //         doorlock.style.display = 'none';
-    //         doorlock.classList.remove('slide-in');
-    //         doorlock.classList.remove('slide-out');
-    //     }, 1000)
-    // }
+    } else if (data.type == "display") {
+        if (data.text !== undefined) {
+            doorlock.style.display = 'block';
+            doorlock.innerHTML = data.text;
+            doorlock.classList.add('slide-in');
+        }
+    } else if (data.type == "hide") {
+        doorlock.classList.add('slide-out');
+        setTimeout(function() {
+            doorlock.innerHTML = '';
+            doorlock.style.display = 'none';
+            doorlock.classList.remove('slide-in');
+            doorlock.classList.remove('slide-out');
+        }, 1000)
+    }
 })
 
 document.addEventListener('keyup', (e) => {
