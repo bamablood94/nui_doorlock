@@ -93,7 +93,7 @@ Config.DoorList['parkinggarage'] = {
     authorizedJobs = { ['mechanic']=0 },
     fixText = false,
     locked = true,
-    maxDistance = 3.0,
+    maxDistance = 4.0,
     objHash = 267415464,
     --oldMethod = true,
     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
